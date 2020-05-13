@@ -38,9 +38,9 @@ namespace GrattanDistances
                 if (!EqualityComparer<T>.Default.Equals(fd1.ItemFreq.Values[i].value, fd2.ItemFreq.Values[i].value))
                     throw new Exception("Mismatched values in frequency distribution for Cosine distance calculation");
 
-                dotProduct += fd1.ItemFreq.Values[i].count * fd2.ItemFreq.Values[i].count;
-                l2norm1 += fd1.ItemFreq.Values[i].count * fd1.ItemFreq.Values[i].count;
-                l2norm2 += fd2.ItemFreq.Values[i].count * fd2.ItemFreq.Values[i].count;
+                dotProduct += (float)fd1.ItemFreq.Values[i].count * fd2.ItemFreq.Values[i].count;
+                l2norm1 += (float)fd1.ItemFreq.Values[i].count * fd1.ItemFreq.Values[i].count;
+                l2norm2 += (float)fd2.ItemFreq.Values[i].count * fd2.ItemFreq.Values[i].count;
             }
             double cos = dotProduct / (Math.Sqrt(l2norm1) * Math.Sqrt(l2norm2));
             // convert cosine value to radians then to degrees
