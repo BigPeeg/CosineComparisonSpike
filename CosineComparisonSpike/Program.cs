@@ -10,6 +10,7 @@ namespace CosineComparisonSpike
         {
             List<int> l1 = new List<int>();
             List<int> l2 = new List<int>();
+            string testKey = "LAyHVE4a5y6RNfVFP9e8s3cAaeiZrqn5Hy7Kx8q3";
 
             Console.WriteLine("Similar");
             l1.Add(1);
